@@ -1,0 +1,23 @@
+{
+  "name": "practice_with_crafty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.1.1",
+    "craftyjs": "^0.7.1",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "webpack": "^1.13.3",
+    "webpack-require": "0.0.16"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.8"
+  }
+}

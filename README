@@ -1,0 +1,24 @@
+I was working with crafty and trying to create an object approach from the example here: 
+
+https://github.com/kevinsimper/craftyjs-npm-example
+
+When trying to run the code with webpack I get these errors:
+
+WARNING in ../~/craftyjs/src/core/storage.js
+Critical dependencies:
+4:79-86 require function is used in a way in which dependencies cannot be statically extracted
+ @ ../~/craftyjs/src/core/storage.js 4:79-86
+
+ERROR in ../~/craftyjs/src/graphics/color.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/user/Desktop/crafty_research/practice_with_crafty/node_modules/craftyjs/src/graphics
+ @ ../~/craftyjs/src/graphics/color.js 137:9-22
+
+ERROR in ../~/craftyjs/src/graphics/image.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/user/Desktop/crafty_research/practice_with_crafty/node_modules/craftyjs/src/graphics
+ @ ../~/craftyjs/src/graphics/image.js 6:9-22
+
+ERROR in ../~/craftyjs/src/graphics/sprite.js
+Module not found: Error: Cannot resolve module 'fs' in /Users/user/Desktop/crafty_research/practice_with_crafty/node_modules/craftyjs/src/graphics
+ @ ../~/craftyjs/src/graphics/sprite.js 5:9-22
+
+ After some research it appears that there is something in crafty trying to access the file system that webpack does not like. The interesting fact is that it only spits out this error when running with webpack. If run without webpack it will actually run on screen.
